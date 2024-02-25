@@ -1,0 +1,27 @@
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+
+# Visual Studio Code generated
+.vscode/
+
+# Rider generated
+.idea/
+
+# User-specific files
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln.meta
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.svd
