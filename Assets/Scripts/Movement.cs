@@ -9,9 +9,15 @@ public class Movement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
+    [SerializeField] private Animator anim;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -26,6 +32,19 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+
+        if (horizontal > 0f)
+        {
+            anim.SetBool("running", true);
+        } else if (horizontal < 0f)
+        {
+            anim.SetBool("running", true);
+        }
+        else
+        {
+            anim.SetBool("running", false);
+        }
+
 
         Flip();
     }
